@@ -34,20 +34,13 @@ function App() {
 
       <p>amila upul</p>
 
-      {/* ❌ This is removed:
-      {mydata.map((ele, index) => (
-        <Main
-          key={index}
-          name={ele.name}
-          city={ele.city}
-          position={ele.position}
-        >
-          <li><b>Child item for: {ele.name}</b></li>
-        </Main>
-      ))} 
-      */}
+      {/* Print "amila" 4 times */}
+      {mydata.map((_, index) => {
+        return <p key={index}>amila</p>;
+      })}
     </>
   );
 }
 
 export default App;
+

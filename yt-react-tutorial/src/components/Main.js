@@ -1,14 +1,16 @@
 const name = 'manuja';
-  const position = 'se';
+const position = 'se';
 
-  class myObj ={
-    name:`${name}`,
-    position:`${position}`,
-  };
+// ✅ Correct object declaration
+const myObj = {
+  name: `${name}`,
+  position: `${position}`,
+  city: "tangalle",
+};
 
-
-function Main(props) {
-  
+function Main({ children }) {
+  // ✅ Destructuring city from myObj
+  const { city } = myObj;
 
   return (
     <div>
@@ -16,12 +18,13 @@ function Main(props) {
       <ul>
         <li>{myObj.name}</li>
         <li>{myObj.position}</li>
-        <li>dsdd</li>
+        <li>{city}</li> {/* ✅ You can also use city directly here */}
         <li>ds</li>
 
-        {/* 👇 This will render whatever is passed from <Main> in App.js */}
-        {props.children}
+        {/* ✅ Renders children passed from App */}
+       
       </ul>
+       {children}
     </div>
   );
 }

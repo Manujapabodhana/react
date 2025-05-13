@@ -16,8 +16,8 @@ function Main({ children }) {
     <div>
       This is main components
       <ul>
-        <li>{myObj.name}</li>
-        <li>{myObj.position}</li>
+        <li>{name}</li>
+        <li>{position}</li>
         <li>{city}</li> {/* ✅ You can also use city directly here */}
         <li>ds</li>
 
